@@ -1,0 +1,221 @@
+<!-- A2JodiVisser: Recreating Forms -->
+<!-- HTML program uses a form to capture data -->
+<!-- Creation Date: February 11, 2016 -->
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Create your Google Account</title>
+        <link rel="stylesheet" type="text/css" href="form.css">
+        <link rel="shortcut icon" href="google_favicon.png" />
+        <script src="form.js"></script>
+    </head>
+    <body onload="focus();">
+        <div class="top-toolbar">
+            <div class="pull-left"><img class="google-logo" src="googlelogo_color_112x36dp.png" alt="google logo"></div>
+            <div class="pull-right"><button class="button">Sign in</button></div>
+        </div>
+        
+        <div id="header-container">
+            <div id="header">Create your Google Account</div>
+        </div>
+        
+        <div class="main-container">
+            <div id="container">
+                <div class="content-left pull-left">
+                    <div class="outer">
+                        <div class="inner-big-text">One account is all you need</div>    
+                    </div>
+                    <div class="outer">                        
+                        <span class="inner-small-text">One free account gets you into everything Google.</span>
+                    </div>
+                    <div class="outer">                        
+                        <img class="inner-image" src="wlogostrip_325x24_1x.png" alt="">
+                    </div>
+                    <div class="outer">
+                        <div class="inner-big-text2">Take it all with you</div>    
+                    </div>
+                    <div class="outer">                        
+                        <span class="inner-small-text">Switch between devices, and pick up wherever you left off.</span>
+                    </div>
+                    <div class="outer">                        
+                        <img class="inner-image" src="devices_1x.png" alt="">
+                    </div>
+                    <div id="compound_error_message"></div>
+                </div>
+                <div class="form-container pull-left">
+                    
+                    <!--<form name='googleSignUp' method='post' id="return" onsubmit="return submit()" encypte="text/plain">-->
+                        
+                        <div class="form-body">
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Name</div>
+                                <div>
+                                    <div class="pull-left">
+                                        <input class="input name-input" type="text" name="fname" id="fname" placeholder="First">
+                                    </div>
+                                    <div>
+                                        <input class="input name-input" type="text" name="lname" id="lname" placeholder="Last">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_name"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">City</div>
+                                <div>
+                                    <div>
+                                        <input class="input" type="text" name="city" id="city" placeholder="City">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_city"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Postal Code</div>
+                                <div>
+                                    <div>
+                                        <input class="input" type="text" name="postal_code" id="postal_code" placeholder="Postal Code">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_postal"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Choose your username</div>
+                                <div>
+                                    <div>
+                                        <input class="input" type="text" name="username" id="username" placeholder="@gmail">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_username"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Create a password</div>
+                                <div>
+                                    <div>
+                                        <input class="input" type="password" name="password" id="password" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_password"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Confirm your password</div>
+                                <div>
+                                    <div>
+                                        <input class="input" type="password" name="confirm_password" id="confirm_password" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_confirm_password"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Birthday</div>
+                                <div>
+                                    <div>
+                                        <select class="input combobox-value-input" id="month">
+                                            <option value="January">January</option>
+                                            <option value="February">February</option>
+                                            <option value="March">March</option>
+                                            <option value="April4">April</option>
+                                            <option value="May">May</option>
+                                            <option value="June">June</option>
+                                            <option value="July7">July</option>
+                                            <option value="August">August</option>
+                                            <option value="September">September</option>
+                                            <option value="October">October</option>
+                                            <option value="November">November</option>
+                                            <option value="December">December</option>
+                                        </select>
+                                        <input class="input value-input" type="text" name="birthdate_day" id="birthdate_day" placeholder="Day">
+                                        <input class="input value-input" type="text" name="birthdate_year" id="birthdate_year" placeholder="Year">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_combobox_month"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Gender</div>
+                                <div>
+                                    <div>
+                                        <select class="input combobox-value-input" id="gender">
+                                            <option value="Female">Female</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Other">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_combobox_gender"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Mobile phone</div>
+                                <div>
+                                    <div>
+                                        <input class="input" type="text" name="mobile_phone" id="mobile_phone" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_phone"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Your current email address</div>
+                                <div>
+                                    <div>
+                                        <input class="input" type="text" name="current_email" id="current_email" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation__current_email"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Prove you're not a robot</div>
+                                <div>
+                                    <input type="checkbox"><span class="small-text">Skip this verification (phone verification may be required)</span><br>
+                                    <div>
+                                        <img src="captia.jpg" alt="captia_value">
+                                    </div>
+                                    <div>
+                                        <input class="input" type="text" name="captia" id="captia" placeholder="">
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_captia"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div class="form-header">Location</div>
+                                <div>
+                                    <div>
+                                        <select class="input combobox-value-input" id="location">
+                                            <option value="1">Canada</option>
+                                            <option value="2">USA</option>
+                                            <option value="3">Other</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="validation-text" id="validation_combobox_location"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <div>
+                                    <input type="checkbox" id="agree"><span class="small-text">I agree to the Google <a href="https://accounts.google.com/TOS?loc=CA&hl=en">Terms of Service</a> and <a href="https://accounts.google.com/TOS?loc=CA&hl=en&privacy=true">Privacy Policy</a></span><br>
+                                </div>
+                                <div class="validation-text" id="validation_checkbox_agree"></div>
+                            </div>
+                            
+                            <div class="form-control-container">
+                                <button onclick="submit()">Submit</button>
+                            </div>
+                            
+                        </div>
+                    <!--</form>-->
+                </div>
+                    
+            </div>
+        </div>
+        
+    </body>
+</html>
