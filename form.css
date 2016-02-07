@@ -194,3 +194,11 @@
 .pull-right:after {
     clear: both;
 }
+
+#compound_error_message {
+    font-family: 'Open Sans', arial;
+    margin: 25px 10px 25px 10px;
+    padding: 10px 10px 10px 10px;
+    background-color: #f1f1f1;
+    color: #dd4b39;
+}

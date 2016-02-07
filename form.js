@@ -8,6 +8,7 @@
  */
 
 //Methods that validate the fields
+var focusControl;
 var errorMessage;
 function validateFirstName()
 {
@@ -17,7 +18,12 @@ function validateFirstName()
     {
         document.getElementById('validation_name').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your First Name</div>";
-        document.getElementById('fname').focus();
+        
+        if(!focusControl)
+        {
+            focusControl = 'fname';
+        }
+        
         return false;
     }
     else
@@ -35,7 +41,11 @@ function validateLastName()
     {
         document.getElementById('validation_name').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your Last Name</div>";
-        document.getElementById('lname').focus();
+        
+        if(!focusControl)
+        {
+            focusControl = 'lname';
+        }
         return false;
     }
     else
@@ -53,12 +63,23 @@ function validateCity()
     {
         document.getElementById('validation_city').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your City</div>";
-        document.getElementById('city').focus();
+               
+        if(!focusControl)
+        {
+            focusControl = 'city';
+        }
+        
         return false;
     }
-    if(city.length < 3)
+    else if(city.length < 3)
     {
         document.getElementById('validation_city').innerHTML = "City must be at least 3 characters long.";
+        
+        if(!focusControl)
+        {
+            focusControl = 'city';
+        }
+        
         return false;
     }
     else
@@ -76,7 +97,12 @@ function validatePostalCode()
     {
         document.getElementById('validation_postal').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your Postal Code</div>";
-        document.getElementById('postal_code').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'postal_code';
+        }
+        
         return false;
     }
     else
@@ -94,7 +120,12 @@ function validateUserName()
     {
         document.getElementById('validation_username').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your Username</div>";
-        document.getElementById('username').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'username';
+        }
+        
         return false;
     }
     else
@@ -112,7 +143,12 @@ function validatePassword()
     {
         document.getElementById('validation_password').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your Password</div>";
-        document.getElementById('password').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'password';
+        }
+        
         return false;
     }
     else
@@ -130,7 +166,12 @@ function validateConfirmPassword()
     {
         document.getElementById('validation_confirm_password').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please confirm your Password</div>";
-        document.getElementById('confirm_password').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'confirm_password';
+        }
+        
         return false;
     }
     else
@@ -148,7 +189,12 @@ function validateBirthdayMonth()
     {
         document.getElementById('validation_combobox_month').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter the Month of your birth date</div>";
-        document.getElementById('month').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'month';
+        }
+        
         return false;
     }
     else
@@ -166,7 +212,12 @@ function validateBirthdayDay()
     {
         document.getElementById('validation_combobox_month').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter the Day of your birth date</div>";
-        document.getElementById('birthdate_day').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'birthdate_day';
+        }
+        
         return false;
     }
     else
@@ -184,7 +235,12 @@ function validateBirthdayYear()
     {
         document.getElementById('validation_combobox_month').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter the Year of your birth date</div>";
-        document.getElementById('birthdate_year').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'birthdate_year';
+        }
+        
         return false;
     }
     else
@@ -202,7 +258,12 @@ function validateGender()
     {
         document.getElementById('validation_combobox_gender').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your Gender</div>";
-        document.getElementById('gender').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'gender';
+        }
+        
         return false;
     }
     else
@@ -220,7 +281,12 @@ function validateMobilePhone()
     {
         document.getElementById('validation_phone').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your Mobile Phone Number</div>";
-        document.getElementById('mobile_phone').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'mobile_phone';
+        }
+        
         return false;
     }
     else
@@ -238,7 +304,12 @@ function validateCurrentEmail()
     {
        document.getElementById('validation__current_email').innerHTML = "You can't leave this empty.";
        document.getElementById("compound_error_message").innerHTML += "<div>Please enter your Current Email Address</div>";
-       document.getElementById('current_email').focus(); 
+              
+       if(!focusControl)
+       {
+            focusControl = 'current_email';
+       }
+       
        return false;
     }
     else
@@ -256,7 +327,12 @@ function validateCaptia()
     {
         document.getElementById('validation_captia').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter the characters displayed in the image</div>";
-        document.getElementById('validation_captia').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'captia';
+        }
+        
         return false;
     }
     else
@@ -274,7 +350,12 @@ function validateLocation()
     {
         document.getElementById('"validation_combobox_location"').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please enter your Countrye</div>";
-        document.getElementById('location').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'location';
+        }
+        
         return false;
     }
     else
@@ -292,7 +373,12 @@ function validateAgreement()
     {
         document.getElementById('"validation_checkbox_agree"').innerHTML = "You can't leave this empty.";
         document.getElementById("compound_error_message").innerHTML += "<div>Please Agree to the Google terms of service to submit the form</div>";
-        document.getElementById('agree').focus();
+                
+        if(!focusControl)
+        {
+            focusControl = 'agree';
+        }
+        
         return false;
     }
     else
@@ -305,85 +391,27 @@ function validateAgreement()
 
 function submit()
 {
-    if(!validateFirstName())
-    {
-        return false;
-    }
+    focusControl = '';
+    document.getElementById("compound_error_message").innerHTML = '';
     
-    if(!validateLastName())
-    {
-        return false;
-    }
+    validateFirstName();
+    validateLastName();
+    validateCity();
+    validatePostalCode();
+    validateUserName();
+    validatePassword();
+    validateConfirmPassword();
+    validateBirthdayMonth();
+    validateBirthdayDay();
+    validateBirthdayYear();
+    validateGender();
+    validateMobilePhone();
+    validateCurrentEmail();
+    validateCaptia();
+    validateLocation();
+    validateAgreement();
     
-    if(!validateCity())
-    {
-        return false;
-    }
-    
-    if(!validatePostalCode())
-    {
-        return false;
-    }
-    
-    if(!validateUserName())
-    {
-        return false;
-    }
-    
-    if(!validatePassword())
-    {
-        return false;
-    }
-    
-    if(!validateConfirmPassword())
-    {
-        return false;
-    }
-    
-    if(!validateBirthdayMonth())
-    {
-        return false;
-    }
-    
-    if(!validateBirthdayDay())
-    {
-        return false;
-    }
-    
-    if(!validateBirthdayYear())
-    {
-        return false;
-    }
-    
-    if(!validateGender())
-    {
-        return false;
-    }
-    
-    if(!validateMobilePhone())
-    {
-        return false;
-    }
-    
-    if(!validateCurrentEmail())
-    {
-        return false;
-    }
-    
-    if(!validateCaptia())
-    {
-        return false;
-    }
-    
-    if(!validateLocation())
-    {
-        return false;
-    }
-    
-    if(!validateAgreement())
-    {
-        return false;
-    }    
+    document.getElementById(focusControl).focus();
 }
 
 function focus() 
